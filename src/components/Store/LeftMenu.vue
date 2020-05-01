@@ -4,7 +4,7 @@
     <q-list class="rounded-borders q-mr-md">
       <q-separator class="q-mb-md" />
 
-      <q-expansion-item expand-separator icon="perm_identity">
+      <q-expansion-item icon="perm_identity">
         <template v-slot:header>
           <q-avatar class="q-mr-lg" size="md">
             <img

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row q-mb-lg my-container">
+    <div class="row text-weight-bolder q-mb-lg my-container">
       <q-breadcrumbs style="align-self: left;">
         <q-breadcrumbs-el label="Inicio" icon="home" />
         <q-breadcrumbs-el label="Labios" />
@@ -28,7 +28,7 @@
             Sort by
           </q-bar>
           <div class="row flex flex-center q-gutter-md">
-            <product-card v-for="card in 3" v-bind:key="card" />
+            <product-card v-for="card in 4" v-bind:key="card" />
           </div>
         </template>
       </div>

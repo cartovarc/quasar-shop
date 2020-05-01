@@ -1,9 +1,9 @@
 <template>
   <q-layout view="lHr lpr lFr">
     <q-header class="bg-white text-black" bordered>
-      <q-bar dark class="my-bar text-white q-pa-md">
-        <div class="col text-center text-weight-medium text-overline">
-          100% AUTENTICA
+      <q-bar dark class="bg-primary text-white q-pa-md">
+        <div class="col text-center text-weight-bolder text-overline">
+          ¡NACIMOS PARA BRILLAR!
         </div>
       </q-bar>
       <q-toolbar class=" q-pa-md">
@@ -109,9 +109,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.my-bar
-  background-color: #ff6666
-
 .my-container
   @media (min-width: $breakpoint-sm-min)
     margin-left: 80px

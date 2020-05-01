@@ -38,7 +38,7 @@ export default {
 .my-card
   width: 100%
   @media (min-width: $breakpoint-sm-min)
-    max-width: 250px
+    max-width: 200px
   @media (max-width: $breakpoint-sm-max)
     max-width: 150px
 </style>
