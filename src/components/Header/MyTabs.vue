@@ -8,13 +8,16 @@
         :name="id"
         :label="tab.label"
       >
+        <q-resize-observer @resize="onResizeTab" />
+
         <q-popup-proxy
           @hide="unselectTab(id)"
           :target="'#' + id"
           ref="popup"
-          :offset="[0, 10]"
+          :offset="offset"
+          transition-show="flip-up"
         >
-          <q-banner class="q-pa-none q-ma-none">
+          <q-banner :ref="id" class="q-pa-none q-ma-none">
             <q-item
               v-for="(subcategorie, key) in tab.subcategories"
               v-bind:key="key"
@@ -28,6 +31,7 @@
               </q-item-section>
               <q-item-section>{{ subcategorie.label }}</q-item-section>
             </q-item>
+            <q-resize-observer @resize="onResizeBanner" />
           </q-banner>
         </q-popup-proxy>
       </q-tab>
@@ -37,9 +41,17 @@
 
 <script>
 export default {
-  computed: {},
+  computed: {
+    offset() {
+      let xOffset = (this.bannerWidth - this.tabWidth - 32) / 2; // include margin width
+      let yOffset = 10;
+      return [xOffset, yOffset];
+    }
+  },
   data() {
     return {
+      bannerWidth: 0,
+      tabWidth: 0,
       tab: "",
       tabs: {
         makeup: {
@@ -98,6 +110,12 @@ export default {
           t.tab = "";
         }
       }, 100);
+    },
+    onResizeBanner(size) {
+      this.bannerWidth = size.width;
+    },
+    onResizeTab(size) {
+      this.tabWidth = size.width;
     }
   }
 };

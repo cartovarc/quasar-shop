@@ -16,7 +16,7 @@
         class="full-width"
         outline
         style="color: #ff6666;"
-        label="Continue shopping"
+        label="Continua comprando"
       />
     </div>
   </div>

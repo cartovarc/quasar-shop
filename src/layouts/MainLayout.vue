@@ -1,12 +1,12 @@
 <template>
   <q-layout view="lHr lpr lFr">
-    <q-header class="text-black" bordered>
+    <q-header class="bg-white text-black" bordered>
       <q-bar dark class="my-bar text-white q-pa-md">
         <div class="col text-center text-weight-medium text-overline">
           100% AUTENTICA
         </div>
       </q-bar>
-      <q-toolbar class="q-pa-md">
+      <q-toolbar class=" q-pa-md">
         <q-btn
           flat
           dense
@@ -71,7 +71,7 @@
       </right-drawer-content>
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container class="my-container">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -108,8 +108,17 @@ export default {
 };
 </script>
 
-<style scoped>
-.my-bar {
-  background-color: #ff6666;
-}
+<style lang="sass" scoped>
+.my-bar
+  background-color: #ff6666
+
+.my-container
+  @media (min-width: $breakpoint-sm-min)
+    margin-left: 80px
+    margin-right: 80px
+    margin-top: 10px
+  @media (max-width: $breakpoint-sm-max)
+    margin-left: 10px
+    margin-right: 10px
+    margin-top: 10px
 </style>
